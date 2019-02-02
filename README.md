@@ -2,4 +2,4 @@
 
 Návrh stránek pro OHK
 
-* Přidal uživatel Prezentace
+* Přidal uživatel prezentace
