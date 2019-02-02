@@ -243,13 +243,13 @@ $(document).ready(function(){
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
         // Output the result in an element with id="demo"
-        document.getElementById("timer").innerHTML ="<div class='start-in'>start in:</div>"+ days + "<span>days  </span>: " + hours + "<span>hour</span>: "
-        + minutes + "<span>mins  </span>: " + seconds + "<span>secs  </span>";
+        document.getElementById("timer").innerHTML ="<div class='start-in'>Do zahájení zbývá:</div>"+ days + "<span>dnů  </span>: " + hours + "<span>hodin</span>: "
+        + minutes + "<span>minut  </span>: " + seconds + "<span>sekund  </span>";
         
         // If the count down is over, write some text 
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("timer").innerHTML = "EXPIRED";
+            document.getElementById("timer").innerHTML = "Zahájeno";
         }
     }, 1000);
 
