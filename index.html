@@ -29,6 +29,21 @@
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/main.css">
+	<style>
+		li a:hover {
+			background-color: #8ab92d;
+			color: white;
+		}
+		li a {
+			color: #444;
+			display: block;
+			padding: 1em;
+			font-weight: 500;
+		}
+		select {
+			font-size: 1.2em;
+		}
+	</style>	
 </head>
 
 <body>
@@ -65,7 +80,7 @@
 		<div class="container">
 			<div class="row fullscreen d-flex align-items-center justify-content-center">
 				<div class="banner-content col-lg-9 col-md-12">
-					<h6>Vyber si svou budoucnost</h6>
+					<h6>Nasměruj svou budoucnost</h6>
 					<h1 class="text-white text-uppercase text-info">
 						Veletrh povolání
 					</h1>
@@ -109,11 +124,11 @@
 	<!-- End home-aboutus Area -->
 
 	<!-- Start callaction Area -->
-	<section class="bg-info p-5">
+	<section class="bg-dark p-5">
 		<div class="container">
 			<div class="row text-center">
 				<div class="col-12">
-					<h1 class="text-white text-uppercase">Organizace akce</h1>
+					<h1 class="text-white text-uppercase">Pořadatelé</h1>
 				</div>
 			</div>
 	</section>
@@ -160,18 +175,55 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-10">
-					<h1 class="text-white">Huge Transaction in last Week</h1>
+					<h1 class="text-white">Nasměruj svou budoucnost</h1>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-						magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+						Vyber si obor, který Tě přitahuje, a my Ti nabídneme školy i firmy, které Tě mohou zajímat.
 					</p>
-					<a class="callaction-btn" href="#">Become a Member</a>
+					<div class="form-group">
+						<select class="custom-select" name="" id="obory">
+						</select>
+					</div>
+					<a class="callaction-btn" href="#">Vyhledat informace</a>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- End callaction Area -->
 
+	<!-- Start home-aboutus Area -->
+	<section>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="row bg-secondary">
+						<div class="col-12">
+							<h2 class="text-center text-white text-uppercase pt-3 pb-3">Školy</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 mt-3 mb-5">
+							<ul id="skoly">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 bg-light">
+					<div class="row bg-dark">
+						<div class="col-12">
+							<h2 class="text-center text-white text-uppercase pt-3 pb-3">Zaměstnavatelé</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 mt-3 mb-5">
+							<ul id="firmy">
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End home-aboutus Area -->
 
 	<!-- Start home-aboutus Area -->
 	<section class="home-aboutus-area">
@@ -610,6 +662,9 @@
 	<script src="js/jquery.nice-select.min.js"></script>
 	<script src="js/parallax.min.js"></script>
 	<script src="js/mail-script.js"></script>
+	<script src="js/obory.js"></script>
+	<script src="js/skoly.js"></script>
+	<script src="js/firmy.js"></script>
 	<script src="js/main.js"></script>
 	<script>
 		$(function () {
@@ -619,7 +674,15 @@
 			$("#poradatele img").mouseleave(function () {
 				$("#label").html("&nbsp;");
 			});
-
+			obory.forEach(function(obor){
+				$("#obory").append('<option>'+ obor.obor +'</option>');
+			});
+			skoly.forEach(function(skola){
+				$("#skoly").append('<li class="border-bottom pb-1"><a href="'+ skola.url +'" target="_blank">'+ skola.skola +'</a></li>');
+			});
+			firmy.forEach(function(firma){
+				$("#firmy").append('<li class="border-bottom pb-1"><a href="'+ firma.url +'" target="_blank">'+ firma.firma +'</a></li>');
+			});
 		})
 	</script>
 </body>
