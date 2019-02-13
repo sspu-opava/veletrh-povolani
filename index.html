@@ -34,6 +34,10 @@
 				background-color: #17a2b8;
 				color: white;
 		}
+		.text-green {
+			color: #8ab92d;
+		}
+
 		#skoly li a {
 				color: #444;
 				display: block;
@@ -42,8 +46,8 @@
 		}
 
 		.firmy, #firmy li a:hover {
-			/*background-color: #8ab92d;*/
-			background-color: #1e448a;
+			background-color: #8ab92d;
+			/*background-color: #1e448a;*/
 			color: white;
 		}
 		#firmy li a {
@@ -52,8 +56,11 @@
 			padding: 1em;
 			font-weight: 500;
 		}
-		select {
-			font-size: 1.2em;
+		select.form-control-lg {
+			font-size: 1em;
+		}
+		.video-sec-area .video-right .overlay-bg {
+     		background-color: rgba(0,0,0,0.5);
 		}
 	</style>
 </head>
@@ -97,10 +104,10 @@
 		<div class="container">
 			<div class="row fullscreen d-flex align-items-center justify-content-center">
 				<div class="banner-content col-lg-9 col-md-12">
-					<h6>Vyber si svou budoucnost</h6>
+					<h6><span class="text-info">Vyber si</span> profesi</h6>
 					<p class="text-center"><img src="img/logo7-big.png" alt="" class="w-25"></p>
-					<h1 class="text-white text-uppercase text-info">
-						Veletrh povolání
+					<h1 class="text-green text-uppercase">
+						<span class="text-info">Veletrh</span> povolání
 					</h1>
 					<div class="countdown">
 						<div id="timer" class="text-white"></div>
@@ -253,7 +260,7 @@
 					<h1 class="text-white">Kdo umí, ten umí</h1>
 					<p><span>Soutěž pro žáky základních škol</span></p>
 					<p>Okresní hospodářská komora Opava a Střední škola průmyslová a umělecká Opava vyhlašují u příležitosti připravovaného Veletrhu povolání a soutěže Prezentace 2019 soutěž v tvorbě krátkých filmů pro žáky ZŠ nazvanou "Kdo umí, ten umí".</p>
-					<p>Podmínkou účasti v soutěži je vytvoření několikaminutového videa o nějaké profesi tak, aby zaujalo mladé diváky i odbornou porotu.</p>
+					<p class="text-white">Podmínkou účasti v soutěži je vytvoření několikaminutového videa o nějaké profesi tak, aby zaujalo mladé diváky i odbornou porotu.</p>
 					<p>Video by mělo být publikováno na internetu (např. na YouTube) a odkaz na něj mohou autoři poslat <b>nejpozději 18. března 2019</b> na adresu <b>prezentace@sspu-opava.cz</b>.</p>
 					<p><a class="text-info" href="https://www.sspu-opava.cz/cs/zpravy/kdo-umi-ten-umi-soutez-pro-mlade-filmare" target="_blank">Podrobnější informace</a></p>
 					<a class="primary-btn" href="img/kdo-umi-ten-umi.pdf" target="_blank">Plakát soutěže</a>
@@ -277,7 +284,7 @@
 				</div>
 				<div class="col-lg-6">
 					<div class="active-video-carusel">
-						<div class="item video-right justify-content-center align-items-center d-flex" style="background:url(img/video-bg.jpg) no-repeat center;background-size: cover;">
+						<div class="item video-right justify-content-center align-items-center d-flex" style="background:url(img/video-sui.jpg) no-repeat center;background-size: cover;">
 							<div class="overlay overlay-bg"></div>
 							<a class="play-btn" href="video/OBA_Berufsmesse 2018.mp4"><img class="img-fluid" src="img/play-icon.png" alt=""></a>
 						</div>
